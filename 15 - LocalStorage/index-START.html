@@ -23,6 +23,11 @@
       <input type="text" name="item" placeholder="Item Name" required>
       <input type="submit" value="+ Add Item">
     </form>
+    <div class="extra-items">
+      <input type="submit" name="clear" value="Clear List">
+      <input type="submit" name="check" value="Check All">
+      <input type="submit" name="clear" value="Uncheck All">
+    </div>
   </div>
 
 <script>
@@ -63,6 +68,12 @@
     localStorage.setItem('items', JSON.stringify(items));
     populateList(items, itemsList);
   }
+
+  function clearAll(e) {
+
+  }
+
+
 
   addItems.addEventListener('submit', addItem);
   itemsList.addEventListener('click', toggleDone);
